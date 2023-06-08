@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update flight</h1>
+    <body class="body">
+        <div class="container my-5">
+         <div class="row">
+             <div class="col-md-6 offset-md-3 bg-dark text-white">
+                 <form action="/update-flight" method="post" class="m-2">
+                    <input type="text" name="id"  value="<%=flight.id%>">
+             
+                     <div class="mb-3">
+                         <label class="form-label" >Name</label>
+                         <input class="form-control" type="text" name="name" value="<%=flight.name%>">
+                     </div>
+                     <div class="mb-3">
+                         <label>To</label>
+                         <select class="form-select" name="depart" value="<%=flight.depart%>">
+                             <option selected>Choose Location</option>
+                             <option value="Osogbo">Osogbo</option>
+                             <option value="Lagos">Lagos</option>
+                             <option value="Ibadan">Ibadan</option>
+                             <option value="Kano">Kano</option>
+                             <option value="Yola">Yola</option>
+                             <option value="Enugu">Enugu</option>
+                             <option value="Imo">Imo</option>
+                         </select>
+                     </div>
+             
+                     <div class="mb-3">
+                         <label>From</label>
+             
+                         <select class="form-select" name="arrival"  id="" value="<%=flight.arrival%>">
+                             <option selected>Choose Location</option>
+                             <option value="Osogbo">Osogbo</option>
+                             <option value="Lagos">Lagos</option>
+                             <option value="Ibadan">Ibadan</option>
+                             <option value="Kano">Kano</option>
+                             <option value="Yola">Yola</option>
+                             <option value="Enugu">Enugu</option>
+                             <option value="Imo">Imo</option>
+                         </select>
+                     </div>
+                     <div class="mb-3">
+                         <label>Flight Package</label>
+                         <select class="form-control" name="flightpackage" id="" value="<%=flight.flightpackage%>">
+                             <option selected>Choose Flight Package</option>
+                             <option value="First Class $320">First Class $320</option>
+                             <option value="Economy Class $210">Economy Class $210 </option>
+                             <option value="Business Class $150">Business Class $150 </option>
+                             <option value="Family Class $300">Family Class $300</option>
+                         </select>
+                     </div>
+             
+                     <div class="mb-3">
+                         <label for=""> Date of desired departure</label>
+                         <input type="date" class="form-control" name="date" value="<%=flight.date%>">
+                     </div>
+             
+                     <div>
+                        <!-- <a href=""><label>Payment Server</label></a>  -->
+                     </div>
+             
+                    <input type="submit" class="my-3 w-100 btn btn-primary" value="submit">
+             
+                 </form>
+             </div>
+         </div>
+        </div>
+         
+     </body>
+</html>
